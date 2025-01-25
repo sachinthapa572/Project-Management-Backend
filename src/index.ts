@@ -51,7 +51,7 @@ app.use(
 
 app.get(
   `/`,
-    asyncHandler(async (_req : Request,res : Response,next : NextFunction) => {
+    asyncHandler(async (_req : Request,_res : Response,_next : NextFunction) => {
     throw new BadRequestException('This is a bad request', ErrorCodeEnum.AUTH_INVALID_TOKEN);
   })
 );
